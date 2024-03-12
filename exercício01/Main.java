@@ -13,5 +13,7 @@ public class Main {
 
         imc.calcIMC();
         System.out.printf("IMC: %.2f", imc.getImc());
+
+        scanner.close();
     }
 }

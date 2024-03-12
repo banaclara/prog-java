@@ -14,12 +14,16 @@ public class Estoque {
         this.qtddMin = qtddMin;
     }
 
-    public int getQtddAtual() {
-        return qtddAtual;
-    }
-
     public int getQtddMedia() {
         qtddMedia = (qtddMax + qtddMin) / 2;
         return qtddMedia;
+    }
+
+    public void comprar() {
+        if (qtddAtual >= getQtddMedia()) {
+            System.out.println("Não efetuar compra.");
+        } else {
+            System.out.println("Efetuar compra.");
+        }
     }
 }

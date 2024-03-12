@@ -16,5 +16,7 @@ public class Main {
 
         aluno.media();
         aluno.status();
+
+        scanner.close();
     }
 }

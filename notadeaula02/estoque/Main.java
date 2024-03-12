@@ -15,14 +15,12 @@ public class Main {
             estoque.setQtddMax(scanner.nextInt());
             System.out.println("Qual é a quantidade mínima em estoque?");
             estoque.setQtddMin(scanner.nextInt());
-            if (estoque.getQtddAtual() >= estoque.getQtddMedia()) {
-                System.out.println("Não efetuar compra.");
-            } else {
-                System.out.println("Efetuar compra.");
-            }
+            estoque.comprar();
             System.out.println("Recomeçar? [S/N]");
             repetir = scanner.next().charAt(0);
             repetir = Character.toUpperCase(repetir);
         } while (repetir == 'S');
+
+        scanner.close();
     }
 }

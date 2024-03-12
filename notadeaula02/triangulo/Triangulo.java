@@ -13,20 +13,19 @@ public class Triangulo {
         this.l3 = l3;
     }
 
-    public double getL1() {
-        return l1;
-    }
-
-    public double getL2() {
-        return l2;
-    }
-
-    public double getL3() {
-        return l3;
-    }
-
 
     public boolean formarTriangulo() {
         return l1 + l2 > l3 && l1 + l3 > l2 && l2 + l3 > l1;
     }
+
+    public void tipoTriangulo() {
+        if (l1 == l2 && l1 == l3) {
+            System.out.println("Triângulo equilátero.");
+        } else if (l1 == l2 || l2 == l3 || l1 == l3) {
+            System.out.println("Triângulo isósceles.");
+        } else {
+            System.out.println("Triângulo escaleno.");
+        }
+    }
+
 }

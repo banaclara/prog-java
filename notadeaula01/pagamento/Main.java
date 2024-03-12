@@ -5,16 +5,17 @@ public class Main {
 
         Funcionario f = new Funcionario();
         Scanner teclado = new Scanner(System.in);
-        DescontoINSS dI = new DescontoINSS();
 
         System.out.println("Nome: ");
         f.nome = teclado.next();
         System.out.println("Matrícula: ");
         f.matricula = teclado.nextInt();
         System.out.println("Salário bruto: ");
-        dI.salarioBruto = teclado.nextDouble();
-        dI.descontar();
+        f.salarioBruto = teclado.nextDouble();
+        f.descontar();
 
-        System.out.print("Salário líquido: " + dI.salarioDescontado());
+        System.out.print("Salário líquido: " + f.salarioLiq());
+
+        teclado.close();
     }
 }

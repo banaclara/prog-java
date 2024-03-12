@@ -17,13 +17,7 @@ public class Main {
             tri.setL3(scanner.nextDouble());
 
             if (tri.formarTriangulo()) {
-                if (tri.getL1() == tri.getL2() && tri.getL1() == tri.getL3()) {
-                    System.out.println("Triângulo equilátero.");
-                } else if (tri.getL1() == tri.getL2() || tri.getL2() == tri.getL3() || tri.getL1() == tri.getL3()) {
-                    System.out.println("Triângulo isósceles.");
-                } else {
-                    System.out.println("Triângulo escaleno.");
-                }
+                tri.tipoTriangulo();
             } else {
                 System.out.println("Os comprimentos fornecidos não podem formar um triângulo.");
             }
@@ -32,5 +26,7 @@ public class Main {
             repetir = scanner.next().charAt(0);
             repetir = Character.toUpperCase(repetir);
         } while (repetir == 'S');
+
+        scanner.close();
     }
 }

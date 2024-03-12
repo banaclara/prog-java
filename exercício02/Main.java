@@ -42,5 +42,7 @@ public class Main {
             System.out.println("Para repetir, digite 0");
             repetir = scanner.nextInt();
         } while (repetir == 0);
+
+        scanner.close();
     }
 }
