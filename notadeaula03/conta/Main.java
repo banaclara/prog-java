@@ -77,8 +77,8 @@ public class Main {
                                 } else {cp.sacar(saque);}
                                 break;
                             case 3:
-                                System.out.println("Taxa Selic: ");
-                                cp.calcularRendimento(scanner.nextDouble());
+                                System.out.println("Taxa Selic: 8%");
+                                cp.calcularRendimento(8);
                                 break;
                             case 4:
                                 cp.exibirCP();
