@@ -13,9 +13,10 @@ public class Triangulo {
         this.l3 = l3;
     }
 
-
-    public boolean formarTriangulo() {
-        return l1 + l2 > l3 && l1 + l3 > l2 && l2 + l3 > l1;
+    public void formarTriangulo() {
+        if (l1 + l2 > l3 && l1 + l3 > l2 && l2 + l3 > l1) {
+            tipoTriangulo();
+        } else {System.out.println("Os comprimentos fornecidos não podem formar um triângulo.");}
     }
 
     public void tipoTriangulo() {

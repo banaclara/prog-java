@@ -16,11 +16,7 @@ public class Main {
             System.out.println("Qual o comprimento do terceiro lado do triângulo?");
             tri.setL3(scanner.nextDouble());
 
-            if (tri.formarTriangulo()) {
-                tri.tipoTriangulo();
-            } else {
-                System.out.println("Os comprimentos fornecidos não podem formar um triângulo.");
-            }
+            tri.formarTriangulo();
 
             System.out.println("Novo triângulo? [S/N]");
             repetir = scanner.next().charAt(0);
