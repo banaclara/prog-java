@@ -5,7 +5,8 @@ public class ContaCorrente extends ContaBancaria {
         return chequeEspecial;
     }
 
-    public double depositoCorrente(double valor) {
+    @Override
+    public double depositar(double valor) {
         if (saldo <= 0 && valor + saldo > 0) {
             chequeEspecial = 1000;
             super.depositar(valor);
@@ -13,7 +14,7 @@ public class ContaCorrente extends ContaBancaria {
             if (saldo + valor > 0) {
                 chequeEspecial += (saldo + valor);
             } else {
-                chequeEspecial += + valor;
+                chequeEspecial += valor;
             }
             saldo = saldo + valor;
         } else if (valor > saldo && saldo + valor < 0) {
@@ -32,8 +33,7 @@ public class ContaCorrente extends ContaBancaria {
             saldo -= valor;
             chequeEspecial += saldo;
         } else if (saldo - valor >= 0) {
-            saldo -= valor;
-            System.out.println("O valor solicitado está disponível no seu saldo e não precisa ser descontado do cheque especial.");
+            System.out.println("O valor solicitado está disponível no seu saldo e não precisa ser descontado do cheque especial. Retorne ao menu e selecione a opção 'Sacar'.");
         } else {
             saldo -= valor;
             chequeEspecial -= valor;
@@ -41,7 +41,8 @@ public class ContaCorrente extends ContaBancaria {
         return saldo;
     }
 
-    public void exibirCC() {
+    @Override
+    public void exibirDados() {
         super.exibirDados();
         System.out.println("Disponível no cheque especial: " + chequeEspecial);
         System.out.println("------");

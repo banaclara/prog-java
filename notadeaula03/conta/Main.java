@@ -23,7 +23,7 @@ public class Main {
                         switch (y) {
                             case 1:
                                 System.out.println("Valor a ser depositado:");
-                                cc.depositoCorrente(scanner.nextDouble());
+                                cc.depositar(scanner.nextDouble());
                                 break;
                             case 2:
                                 System.out.println("Valor a ser sacado:");
@@ -46,7 +46,7 @@ public class Main {
                                 cc.usarChequeEspecial(scanner.nextDouble());
                                 break;
                             case 4:
-                                cc.exibirCC();
+                                cc.exibirDados();
                                 break;
                             case 5:
                                 break;
@@ -71,17 +71,14 @@ public class Main {
                                 break;
                             case 2:
                                 System.out.println("Valor a ser sacado:");
-                                double saque = scanner.nextDouble();
-                                if (saque > cp.getSaldo()) {
-                                    System.out.println("Valor indisponível para saque.");
-                                } else {cp.sacar(saque);}
+                                cp.sacar(scanner.nextDouble());
                                 break;
                             case 3:
                                 System.out.println("Taxa Selic: 8%");
                                 cp.calcularRendimento(8);
                                 break;
                             case 4:
-                                cp.exibirCP();
+                                cp.exibirDados();
                                 break;
                             case 5:
                                 break;
