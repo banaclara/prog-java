@@ -14,9 +14,8 @@ public class ContaBancaria {
         return saldo;
     }
 
-    public double depositar(double valor) {
+    public void depositar(double valor) {
         saldo += valor;
-        return saldo;
     }
 
     public void sacar(double valor) {

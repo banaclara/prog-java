@@ -6,7 +6,7 @@ public class ContaCorrente extends ContaBancaria {
     }
 
     @Override
-    public double depositar(double valor) {
+    public void depositar(double valor) {
         if (saldo <= 0 && valor + saldo > 0) {
             chequeEspecial = 1000;
             super.depositar(valor);
@@ -23,10 +23,9 @@ public class ContaCorrente extends ContaBancaria {
         } else {
             super.depositar(valor);
         }
-        return saldo;
     }
 
-    public double usarChequeEspecial(double valor) {
+    public void usarChequeEspecial(double valor) {
         if (valor > chequeEspecial) {
             System.out.println("O valor solicitado não está disponível no cheque especial.");
         } else if (saldo > 0 && saldo - valor < 0) {
@@ -38,7 +37,6 @@ public class ContaCorrente extends ContaBancaria {
             saldo -= valor;
             chequeEspecial -= valor;
         }
-        return saldo;
     }
 
     @Override
